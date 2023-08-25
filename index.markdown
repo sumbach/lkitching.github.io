@@ -4,3 +4,10 @@
 
 layout: home
 ---
+
+<h2>Clojure from scratch</h2>
+{% for page in site.clojure_jvm %}
+<h3>
+<a href="{{ page.url }}">{{ page.title }}</a>
+</h3>
+{% endfor %}
