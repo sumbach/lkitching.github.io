@@ -1,0 +1,9 @@
+META-INF/
+META-INF/MANIFEST.MF
+enterprisey/
+enterprisey/MessageSource.class
+enterprisey/PrintStreamMessageSink.class
+enterprisey/CommandLineMessageSource$1.class
+enterprisey/CommandLineMessageSource.class
+enterprisey/CommandLineMessageSource$Iter.class
+enterprisey/MessageSink.class
