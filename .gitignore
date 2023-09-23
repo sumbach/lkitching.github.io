@@ -6,3 +6,4 @@ vendor
 .idea/
 *.class
 *.jar
+target/

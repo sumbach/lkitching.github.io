@@ -1,0 +1,6 @@
+<repositories>
+    <name>Picosoft internal</name>
+    <id>picosoft-internal</id>
+    <url>https://maven.picosoft.com/</url>
+    <layout>default</layout>
+</repositories>
