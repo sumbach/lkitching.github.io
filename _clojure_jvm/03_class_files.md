@@ -3,8 +3,6 @@ layout: post
 title: Class files
 ---
 
-# Class Files
-
 Java classes are compiled into a binary representation stored in `.class` files. The contents of `.class` files can be viewed with the `javap` tool shipped with the JDK.
 Here's the simple Java class from the previous chapter:
 

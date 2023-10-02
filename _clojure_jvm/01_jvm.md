@@ -3,8 +3,6 @@ layout: post
 title: The JVM and JDK
 ---
 
-# The JVM and JDK
-
 Java (and Clojure) code is not executed directly. Instead, it is compiled into an architecture-independent binary format which is executed
 by a Java Virtual Machine (JVM). The behaviour of the JVM is defined by the [Java Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se20/html/index.html).
 Multiple implementations of this standard are available.

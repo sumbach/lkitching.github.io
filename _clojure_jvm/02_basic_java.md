@@ -3,8 +3,6 @@ layout: post
 title: Java
 ---
 
-# Java
-
 Java is a statically-typed object-oriented language. Java programs are organised as a collection of classes and interfaces. Classes extend a single superclass, implement a number of interfaces, and define various fields and methods.
 Interfaces can declare any number of super-interfaces, along with methods that implementing classes must define.
 

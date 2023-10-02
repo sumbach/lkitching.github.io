@@ -3,8 +3,6 @@ layout: post
 title: Evaluating Clojure
 ---
 
-# Evaluating Clojure
-
 Clojure on the JVM is implemented in a combination of Java and Clojure. The core platform and compiler are written in Java,
 and the base libraries are written in Clojure. Together they are (mostly) distributed in a single JAR file. Recent versions
 also have additional dependencies on a couple of `spec.alpha` JARs as described on the [downloads page](https://clojure.org/releases/downloads).

@@ -3,8 +3,6 @@ layout: post
 title: Dependency management
 ---
 
-# Dependency management
-
 We saw previously how libraries can be packaged into JAR files for easier distribution. After packaging our message library as
 a JAR, our chief architect is so impressed they immediately mandate its use across all projects at our company Picosoft. It proves
 so popular we're inundated with feature requests from other teams. One such request is to support reading messages from a JSON file

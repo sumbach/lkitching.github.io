@@ -3,8 +3,6 @@ layout: post
 title: Compiling Clojure
 ---
 
-# Compiling Clojure
-
 We saw previously how Clojure source code is located on the classpath, read and evaluated. It also supports defining classes which can be compiled
 into `.class` files with [gen-class](https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/gen-class). The following example defines
 two classes with `gen-class`:

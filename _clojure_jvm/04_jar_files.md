@@ -3,8 +3,6 @@ layout: post
 title: JAR Files
 ---
 
-# JAR Files
-
 So far we've seen how Java source files are compiled into binary class files, and how these are located at runtime when the containing directory is placed on the classpath.
 This approach works for the single file application developed previously, but most applications consist of many classes, and make use of libraries which themselves define classes
 and interfaces of their own. Managing and publishing directories of class files would be cumbersome, but fortunately Java defines a standard for packaging related classes into a single

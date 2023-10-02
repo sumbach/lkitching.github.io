@@ -3,8 +3,6 @@ layout: post
 title: Common issues
 ---
 
-# Common issues
-
 Below is a brief list of issues you may encounter when developing on the JVM and some methods for investigating them.
 
 ## NoClassDefFoundError
