@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-I'm a software developer, and not one of those good ones you've heard about.
+I'm a software developer based in the north-west of England interested in functional programming and software quality.
