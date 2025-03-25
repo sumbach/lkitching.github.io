@@ -19,19 +19,19 @@ We fetch the JSON library JAR locally and begin work:
 
      > curl -L -o json-java.jar https://search.maven.org/remotecontent?filepath=org/json/json/20230618/json-20230618.jar
 
-after a frenetic caffeine-fueled 10-hour coding session, we finally have our new message source implementation:
+After a frenetic caffeine-fueled 10-hour coding session, we finally have our new message source implementation:
 
 __src/libhello/JSONMessageSource.java__
 ```
 {% include code/java_dependencies/JSONMessageSource.java %}
 ```
 
-as before, we compile the library, updating the build classpath to include the dependency JAR:
+As before, we compile the library, updating the build classpath to include the dependency JAR:
 
     > javac -cp json-java.jar -d classes/libhello src/libhello/*.java
     > jar --create --file libhello.jar -C classes/libhello .
 
-we write a small test application and data file for the new source
+We write a small test application and data file for the new source
 
 __EchoJSON.java__
 ```java
@@ -48,7 +48,7 @@ and run it to check the input messages are displayed as expected:
     > javac -cp json-java.jar:libhello.jar -d app EchoJSON.java
     > java -cp json-java.jar:libhello.jar:app test.EchoJSON messages.json
 
-satisfied with another job well done, we email the updated JAR to the chief scrum master of the originating team for the request.
+Satisfied with another job well done, we email the updated JAR to the chief scrum master of the originating team for the request.
 
 Shortly after, we receive a response complaining that when running their application, they receive the following error:
 
