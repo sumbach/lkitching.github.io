@@ -68,7 +68,7 @@ which means it is only supported by versions 14 or higher of the JVM. Attempting
 
 ## Class properties 
 
-The `flags`, `this_class` and `super_class` entries define the access properties and names of the defined class and its direct superclass. The `Hello` class does not explicitly
+The `flags`, `this_class` and `super_class` entries define the access properties and names of the defined class and its direct superclass. The `test.Hello` class does not explicitly
 declare a superclass, so it is implicitly a subclass of `java.lang.Object`. 
 
 ## Constant pool
