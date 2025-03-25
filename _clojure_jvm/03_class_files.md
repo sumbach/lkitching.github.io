@@ -68,8 +68,8 @@ which means it is only supported by versions 14 or higher of the JVM. Attempting
 
 ## Class properties 
 
-The `flags`, `this_class` and `super_class` entries define the access properties and names of the defined class and its direct superclass. The `Hello` does not explicitly
-declare a superclass, so it is implicitly `java.lang.Object`. 
+The `flags`, `this_class` and `super_class` entries define the access properties and names of the defined class and its direct superclass. The `Hello` class does not explicitly
+declare a superclass, so it is implicitly a subclass of `java.lang.Object`. 
 
 ## Constant pool
 
@@ -90,7 +90,7 @@ Within class files, descriptors are used to define the types of fields and metho
 JVM types are either one of the primitive types, an object type or an array type. The grammar for
 field descriptors denotes one of these three possibilities.
 
-The primitive types are `byte`, `char`, `double`, `float`, `int`, `long`, `short` and `boolean` and these are denoted as `B`, `C`, `D`, `F`, `I`, `J`, `S` and `Z` respectively within
+The primitive types are `byte`, `char`, `double`, `float`, `int`, `long`, `short` and `boolean`, denoted as `B`, `C`, `D`, `F`, `I`, `J`, `S` and `Z` respectively within
 the field descriptor grammar. For example, a descriptor of `J` indicates a field of the primitive `long` type.
 
 Object types are defined with the literal `L` followed by the binary name of the class type followed by the literal ';'. For example a field of type `java.lang.Thead` has a descriptor of `Ljava/lang/Thread;`.
@@ -178,7 +178,7 @@ public test.Hello();
 
 The constructor declares no formal parameters, and returns `void` as shown by the descriptor. It does require a single parameter however - the
 reference to the new object being initialised. This is loaded onto the operand stack with the [aload_0](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.aload_n)
-instruction. The `java.lang.Object` constructor is then invoked in the same way, passing the reference just loaded as the first argument. The [invokespecial](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.invokespecial)
+instruction. The `java.lang.Object` constructor is then invoked in the same way, passing the reference just loaded as the first argument. The [invokespecial](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.invokespecial) instruction
 is similar to `invokevirtual` and `invokestatic` but is required to invoke constructors and superclass methods. The operand to the `invokespecial` instruction is an index into the constant pool
 of the `test.Hello` class. The element at index `#1` is a method reference to the `java/lang/Object.<init>` method as indicated by the comment.
 
@@ -205,7 +205,7 @@ The flags also indicate the method is `static` and `public`.
 The [getstatic](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.getstatic) instruction, loads a field reference onto the operand stack. The operand of `#7` is the index of the reference to the
 `System.out` field within the constant pool of the `test.Hello` class.
 
-The literal string "Hello world!" is pushed onto the operand stack with the [ldc](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.ldc) instruction. The operand of
+The string "Hello world!" is pushed onto the operand stack with the [ldc](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.ldc) instruction. The operand of
 `#13` is the index of the string within the class constant pool.
 
 At this point the operand stack contains the arguments to the `java.io.PrintStream.<println>` method - the receiver (the contents of the `System.out` field), and the string to write. The

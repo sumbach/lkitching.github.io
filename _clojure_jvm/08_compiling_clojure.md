@@ -3,7 +3,7 @@ layout: post
 title: Compiling Clojure
 ---
 
-We saw previously how Clojure source code is located on the classpath, read and evaluated. It also supports defining classes which can be compiled
+We saw previously how Clojure source code is located on the classpath, read and evaluated. Clojure also supports defining classes which can be compiled
 into `.class` files with [gen-class](https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/gen-class). The following example defines
 two classes with `gen-class`:
 
@@ -38,7 +38,7 @@ The generated class methods simply delegate to Clojure functions with the approp
 of `greeter-`, so its `greet` method delegates to the function `greeter-greet` within the implementation namespace (by default the current namespace). Similarly, the `main`
 method of the `greet.main` class should be defined by a `-main` function.
 
-The `main` class can now be invoked as with any other main Java class:
+The `main` class can now be invoked as with any other Java main class:
 
 ```
 > java -cp classes:clojure-1.11.1.jar:core.specs.alpha-0.2.62.jar:spec.alpha-0.3.218.jar greet.main everyone
