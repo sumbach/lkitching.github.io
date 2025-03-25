@@ -9,7 +9,7 @@ classpath to make them all available.
 
 The existing Java ecosystem is built around publishing JARs to binary repositories, and, like Java, Clojure code can be packaged into JAR files, 
 whether it has been compiled ahead-of-time or is being distributed as source. Many Clojure libraries are published to the [Clojars](https://clojars.org/)
-repository instead of Maven central. However, since directories can be placed on the classpath, and Clojure code can be located
+repository instead of Maven Central. However, since directories can be placed on the classpath, and Clojure code can be located
 and evaluated directly from source, the extra packaging and publish steps are not necessary for developing Clojure libraries and programs.
 
 The [tools.deps](https://github.com/clojure/tools.deps) library is used to declare dependencies from various sources and build the required
@@ -36,7 +36,7 @@ Now we can create a basic deps project. The structure of the project is defined 
 {% include code/deps/basic/deps.edn %}
 ```
 
-This declares a dependency on the main `clojure` JAR. This JAR is published to Maven central so should be resolved as a Maven dependency.
+This declares a dependency on the main `clojure` JAR. This JAR is published to Maven Central so should be resolved as a Maven dependency.
 This JAR and all of its transitive dependencies should be available on the classpath at runtime. The `src` directory should also be placed
 on the classpath since that is where our application namespaces are defined. Define the main namespace within this directory:
 
@@ -115,7 +115,7 @@ user=>
 
 ## Other dependency sources
 
-The Clojure JARs are published to Maven central so are declared as Maven dependencies in the previous `deps.edn`. Deps supports other dependency
+The Clojure JARs are published to Maven Central so are declared as Maven dependencies in the previous `deps.edn`. Deps supports other dependency
 types such as Git repositories and local directories.
 
 We've decided to improve our greeting application by adding an optional command-line flag to show enthusiasm (or not). We also decided to split the
