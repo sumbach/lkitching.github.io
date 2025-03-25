@@ -23,8 +23,8 @@ can be quite large, and it's not uncommon to come across unknown classes deep in
 #### Statically
 
 Most project management tools such as Maven, Leiningen or tools.deps have tasks to output the current classpath. There are usually
-multiple classpaths within a project depending on the context. A common example is adding extra dependencies are resource directories
-when running tests. As we saw previously, the classpath for a Maven project can be retreived with
+multiple classpaths within a project depending on the context. A common example is adding extra dependencies or resource directories
+when running tests. As we saw previously, the classpath for a Maven project can be retrieved with
 
     mvn dependency:build-classpath -Dmdep.outputFile=classpath.txt
 
@@ -115,7 +115,7 @@ somewhere in your dependency list.
 
 ## ServiceLoader errors
 
-Java [ServiceLoaders](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/ServiceLoader.html) an extensible mechanism for
+Java [ServiceLoaders](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/ServiceLoader.html) are an extensible mechanism for
 locating and loading service classes at runtime. They work by first defining an interface or class e.g.
 
 ```java

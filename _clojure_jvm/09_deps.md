@@ -93,7 +93,7 @@ This means we could use these defaults in our project and our project `deps.edn`
 ## Aliases
 
 At different points of the development process, you might want to make additional dependencies available or add more directories to the classpath.
-This can be done by specifying _aliases_ with in the project `deps.edn` and supplying them to the `clojure` command where required. For example, during
+This can be done by specifying _aliases_ within the project `deps.edn` and supplying them to the `clojure` command where required. For example, during
 development, you might want to use [scope capture](https://github.com/vvvvalvalval/scope-capture) to help with debugging at the REPL. This isn't a dependency
 of the main application, so shouldn't be distributed with it.
 
@@ -118,7 +118,7 @@ user=>
 The Clojure JARs are published to Maven central so are declared as Maven dependencies in the previous `deps.edn`. Deps supports other dependency
 types such as Git repositories and local directories.
 
-We've decided to improve our greeting application by adding an optional command-line flag to show enthusiasm (or not). We also decide to split the
+We've decided to improve our greeting application by adding an optional command-line flag to show enthusiasm (or not). We also decided to split the
 core greeting functionality into its own library. Since it's under active development, we just want to refer to it locally for now before we're ready
 to publish the first version.
 

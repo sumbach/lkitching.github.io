@@ -62,7 +62,7 @@ the `org.json.JSONTokener` class. This is not surprising, since given the `libhe
 on `json-java.jar` at runtime. JAR files are just an archive of class files and do not define a mechanism for declaring which other JARs
 define dependency classes.
 
-In addition, the other team have a few other requirements for consuming our library:
+In addition, the other team has a few other requirements for consuming our library:
 
 * They would prefer not to commit binary files to their source control repository
 * They would like to be able to identify the library version from the JAR file name
@@ -116,12 +116,12 @@ projects can reference dependencies published to this repository without any fur
 
 #### Local repositories
 
-During dependency resolution, Maven fetches any required dependencies and copies them to a local repository. By default, this repository is located at `~/.m2/repository` and follows the same layout at described above.
+During dependency resolution, Maven fetches any required dependencies and copies them to a local repository. By default, this repository is located at `~/.m2/repository` and follows the same layout as described above.
 Therefore, version `0.2.6` of the `data.json` JAR would be fetched to `~/.m2/repository/org/clojure/data.json/0.2.6/data.json-0.2.6.jar`. 
 
 ## Maven library development
 
-Now we understand the basics of Maven we can create a project for our library. First we create a directory for the project and set it up in the
+Now that we understand the basics of Maven we can create a project for our library. First we create a directory for the project and set it up in the
 standard Maven layout. As defined in the [super POM](https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html) Java source files go under
 `${project.basedir}/src/main/java`.
 
@@ -160,7 +160,7 @@ Both the JAR and POM files are published so the dependency information is still 
 
 ## Maven application development
 
-With the library published to our local repository, we decide to convert our test application into a Maven project as well. Again we setup the directory
+With the library published to our local repository, we decide to convert our test application into a Maven project as well. Again we set up the directory
 layout and POM files:
 
 ```
@@ -179,11 +179,11 @@ json-test/
 {% include code/java_dependencies/app/pom.xml %}
 ```
 
-The application POM declares a dependency on the version of the library we want to use. As before the JAR can be build with
+The application POM declares a dependency on the version of the library we want to use. As before the JAR can be built with
 
     mvn package
 
-which creates the JAR in the `json-test-1.0.0.jar`. When we try to run the application with
+which creates the JAR `json-test-1.0.0.jar`. When we try to run the application with
 
     java -cp target/json-test-1.0.0.jar test.EchoJSON messages.json
 
@@ -215,7 +215,7 @@ Another option is to build uber JARs using the [Maven shade plugin](https://mave
 
 Now the library and application are working locally, it's time to share the library with our colleagues. Our chief architect is convinced
 it constitutes a key competitive advantage for the company and is unwilling to unleash it on an unsuspecting public. She arranges for a private
-Maven repository to be setup, and our CI process to publish there instead of the Maven central repository. We advise any teams wishing to use
+Maven repository to be set up, and our CI process to publish there instead of the Maven central repository. We advise any teams wishing to use
 it to configure the private repository in their application POM files with the following fragment:
 
 ```xml
