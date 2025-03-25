@@ -62,7 +62,7 @@ This shows the archive contains the `.class` files as their expected locations o
 This file is called the _manifest_ file and is described [below](#manifest-files).
 
 ```
-{% include code/jar/jar_list %}
+{% include code/jar/jar_list -%}
 ```
 
 Note that JAR files are also zip files, so their contents can be listed with the `unzip` command:
@@ -89,7 +89,7 @@ available by adding the jar file to the classpath. We also add the build output 
 As expected, the application reads each message from the command line and writes it to the console
 
 ```
-{% include code/jar/app_output %}
+{% include code/jar/app_output -%}
 ```
 
 Of course we should also create a JAR for the application:
@@ -113,7 +113,7 @@ The `jar` tool can be used to extract the contents of the default manifest file:
 this is fairly minimal by default:
 
 ```
-{% include code/jar/default_manifest.mf %}
+{% include code/jar/default_manifest.mf -%}
 ```
 
 There are two additional manifest properties we would like to set when building the application JAR:
@@ -125,7 +125,7 @@ We can add these properties to a file to be added to the manifest when building 
 
 __echo-manifest.mf__
 ```
-{% include code/jar/echo-manifest.mf %}
+{% include code/jar/echo-manifest.mf -%}
 ```
 
     > jar --create --file echo.jar --manifest=echo-manifest.mf -C classes/app .
@@ -154,7 +154,7 @@ since all classes are contained within the new JAR.
 
 __uber-manifest.mf__
 ```
-{% include code/jar/uber-manifest.mf %}
+{% include code/jar/uber-manifest.mf -%}
 ```
 
 We can now build the new JAR:
