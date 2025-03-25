@@ -22,24 +22,24 @@ After some back-and-forth, we settle on defining interfaces for sources and dest
 
 __src/libhello/MessageSource.java__
 ``` java
-{% include code/jar/src/libhello/MessageSource.java %}
+{% include code/jar/src/libhello/MessageSource.java -%}
 ```
 
 __src/libhello/MessageSink.java__
 ``` java
-{% include code/jar/src/libhello/MessageSink.java %}
+{% include code/jar/src/libhello/MessageSink.java -%}
 ```
 
 In addition, we define a source of messages read from the command-line, and a sink which writes messages to a `PrintStream`:
 
 __src/libhello/CommandLineMessageSource.java__
 ```java
-{% include code/jar/src/libhello/CommandLineMessageSource.java %}
+{% include code/jar/src/libhello/CommandLineMessageSource.java -%}
 ```
 
 __src/libhello/PrintStreamMessageSink.java__
 ```java
-{% include code/jar/src/libhello/PrintStreamMessageSink.java %}
+{% include code/jar/src/libhello/PrintStreamMessageSink.java -%}
 ```
 
 We compile these classes as usual and output the corresponding class files to the `libhello` directory:
@@ -73,7 +73,7 @@ Now we have build our library, we can re-write our application to use it:
 
 __src/app/Echo.java__
 ```java
-{% include code/jar/src/app/Echo.java %}
+{% include code/jar/src/app/Echo.java -%}
 ```
 
 As before, we compile it with `javac`. Since the application references the classes in `libhello.jar`, we have to place it on the classpath

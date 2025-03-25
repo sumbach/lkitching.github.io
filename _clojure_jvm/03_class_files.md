@@ -8,7 +8,7 @@ Here's the simple Java class from the previous chapter:
 
 __Hello.java__
 {% highlight java %}
-{% include code/basic_java/Hello.java %}
+{% include code/basic_java/Hello.java -%}
 {% endhighlight %}
 
 When compiled with `javac`:

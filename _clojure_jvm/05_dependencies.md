@@ -23,7 +23,7 @@ After a frenetic caffeine-fueled 10-hour coding session, we finally have our new
 
 __src/libhello/JSONMessageSource.java__
 ```
-{% include code/java_dependencies/JSONMessageSource.java %}
+{% include code/java_dependencies/JSONMessageSource.java -%}
 ```
 
 As before, we compile the library, updating the build classpath to include the dependency JAR:
@@ -35,7 +35,7 @@ We write a small test application and data file for the new source
 
 __EchoJSON.java__
 ```java
-{% include code/java_dependencies/EchoJSON.java %}
+{% include code/java_dependencies/EchoJSON.java -%}
 ```
 
 __messages.json__
@@ -139,7 +139,7 @@ Our `pom.xml` file defines the coordinates for the library itself along with its
 
 **pom.xml**
 ```xml
-{% include code/java_dependencies/maven/pom.xml %}
+{% include code/java_dependencies/maven/pom.xml -%}
 ```
 
 Now we can compile and package the library as a JAR:
@@ -174,7 +174,7 @@ json-test/
 
 **pom.xml**
 ```xml
-{% include code/java_dependencies/app/pom.xml %}
+{% include code/java_dependencies/app/pom.xml -%}
 ```
 
 The application POM declares a dependency on the version of the library we want to use. As before the JAR can be built with
@@ -217,7 +217,7 @@ Maven repository to be set up, and our CI process to publish there instead of th
 it to configure the private repository in their application POM files with the following fragment:
 
 ```xml
-{% include code/java_dependencies/private_repository.xml %}
+{% include code/java_dependencies/private_repository.xml -%}
 ```
 
 ### Repository settings
@@ -229,5 +229,5 @@ repository, we just need to configure the credentials to use:
 
 **~/.m2/settings.xml**
 ```xml
-{% include code/java_dependencies/settings.xml %}
+{% include code/java_dependencies/settings.xml -%}
 ```

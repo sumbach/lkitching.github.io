@@ -8,7 +8,7 @@ Interfaces can declare any number of super-interfaces, along with methods that i
 
 __Hello.java__
 {% highlight java %}
-{% include code/basic_java/Hello.java %}
+{% include code/basic_java/Hello.java -%}
 {% endhighlight %}
 
 This defines a class `Hello` in the package `test`. This class contains a single static `main` method which writes a short message to the console.
