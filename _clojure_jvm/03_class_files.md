@@ -103,7 +103,7 @@ has a descriptor of `[I`.
 Methods take a (possibly empty) collection of arguments and optionally return a value. Methods which do not return a value are given a return type of `void` (denoted by `V`) within method descriptors.
 Methods which return a value use the grammar for field descriptors to denote the return type.
 
-Method descriptors consist of a literal `(`, the corresponding field descriptor for each parameter type in sequence, a literal `)` followed by the return type descriptor. This can be either `V` for `void` methods,
+Method descriptors consist of a literal `(`, the corresponding field descriptor for each parameter type in sequence, a literal `)` followed by the return type descriptor. This can be either `V` for `void` methods
 or a field descriptor for the return type.
 
 For example the method `public String test(int i, boolean b, Object o)` has a method descriptor of `(IZLjava/lang/Object;)Ljava/lang/String;`.
@@ -131,7 +131,7 @@ Entries in the method table define the name, attributes (access modifiers etc.) 
 
 ### Instruction format
 
-JVM instructions are variable-length and consist of an `opcode` which defines the operation, and a (possibly empty) sequence of operands. `javap` displays
+JVM instructions are variable-length and consist of an `opcode`, which defines the operation, and a (possibly empty) sequence of operands. `javap` displays
 each instruction in the following format:
 
     <index> <opcode> [ <operand1>, ..., <operandN> ] [ <comment> ]
@@ -150,9 +150,9 @@ store values from the top of the stack into local variables, and some consume mu
 
 #### Arguments
 
-In order to invoke a method, its arguments are pushed in order onto the operand stack, and the method is invoked via a method reference in the class constant pool.
+In order to invoke a method, its arguments are pushed in order onto the operand stack and the method is invoked via a method reference in the class constant pool.
 
-Instance methods are invoked via the `invokevirtual` instruction, and have a first argument which is a reference to the object the method is being invoked on (the receiver).
+Instance methods are invoked via the `invokevirtual` instruction and have a first argument which is a reference to the object the method is being invoked on (the receiver).
 Static methods are invoked with `invokestatic` and only the explicit arguments are pushed prior to invocation.
 
 Within a method, the arguments are loaded onto the operand stack with a family of opcode instructions (`aload`, `iload` etc.).
@@ -176,7 +176,7 @@ public test.Hello();
         line 3: 0
 ```
 
-The constructor declares no formal parameters, and returns `void` as shown by the descriptor. It does require a single parameter however - the
+The constructor declares no formal parameters and returns `void` as shown by the descriptor. It does require a single parameter however - the
 reference to the new object being initialised. This is loaded onto the operand stack with the [aload_0](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.aload_n)
 instruction. The `java.lang.Object` constructor is then invoked in the same way, passing the reference just loaded as the first argument. The [invokespecial](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.invokespecial) instruction
 is similar to `invokevirtual` and `invokestatic` but is required to invoke constructors and superclass methods. The operand to the `invokespecial` instruction is an index into the constant pool
@@ -202,7 +202,7 @@ public static void main(java.lang.String[]);
 As indicated by the descriptor, The `main` method defines a single `String[]` parameter and has a return type of `void`. 
 The flags also indicate the method is `static` and `public`.
 
-The [getstatic](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.getstatic) instruction, loads a field reference onto the operand stack. The operand of `#7` is the index of the reference to the
+The [getstatic](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.getstatic) instruction loads a field reference onto the operand stack. The operand of `#7` is the index of the reference to the
 `System.out` field within the constant pool of the `test.Hello` class.
 
 The string "Hello world!" is pushed onto the operand stack with the [ldc](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.ldc) instruction. The operand of
