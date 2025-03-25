@@ -105,7 +105,7 @@ the `-verbose:class` option to the JVM
 
 This outputs the location each class is loaded from. Writing this to file or filtering with `grep` should allow you
 to find where the class is located on the classpath. This will usually be a JAR file, and if fetched from a Maven repository
-will contain the artifact name and version number in the name.
+will contain the artifact name and version number in the filename.
 
 The next step is deciding where you expect the class to be loaded from - this might be a different library entirely, or a different
 version of the same library.
@@ -146,8 +146,8 @@ com.picosoft.messaging.db.MySqlMessageSourceFactory
 when the implementation JAR is on the classpath these classes can be located and loaded via the `ServiceLoader` interface.
 
 Special care must be taken when building an uberjar containing service loader classes. Multiple implementation JARs will define
-the same `META-INF/services/{service.class}` file. The default conflict handling behaviour when building uberjars is 'last one wins' for
-files at the same path. For service loaders, conflicting files should be concatenated together so all implementation classes are
+the same `META-INF/services/{service.class}` file. When building uberjars, the default conflict handling behaviour for
+files at the same path is 'last one wins'. For service loaders, conflicting files should be concatenated together so all implementation classes are
 listed in the final JAR.
 
 ## Uberjar path conflicts
