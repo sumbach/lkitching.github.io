@@ -85,7 +85,7 @@ the standard layout of a Maven project.
 
 Most projects make use of external libraries, which often in turn declare dependencies of their own. As we've seen, manually managing these dependencies
 and putting them on the classpath rapidly becomes impractical, even for small projects. Maven allows projects to declare which libraries they depend on,
-and manages fetching these locally and constructing the required classpath. Dependencies are identified by a set of _co-ordinates_ which can be used to
+and manages fetching these locally and constructing the required classpath. Dependencies are identified by a set of _coordinates_ which can be used to
 locate them within a repository they're published to. These consist of three main components:
 
 * Group - The entity or organisation responsible for maintaining and publishing the artifact. These are usually identified by a reversed domain name controlled by the publisher, such as `org.apache` or `com.google`.
@@ -98,7 +98,7 @@ specify other components such as a classifier or different type - see [Maven Coo
 ### Repositories
 
 In order to make artifacts available to others, the responsible organisation publishes them to a _repository_. Maven repositories have a [defined layout](https://cwiki.apache.org/confluence/display/MAVENOLD/Repository+Layout+-+Final)
-which can be used to locate an artifact based on its co-ordinates. For most artifacts, the location is given by:
+which can be used to locate an artifact based on its coordinates. For most artifacts, the location is given by:
 
     /$groupId[0]/../${groupId[n]/$artifactId/$version/$artifactId-$version.$extension
 
@@ -135,7 +135,7 @@ libhello/
           ...
 ```
 
-Our `pom.xml` file defines the co-ordinates for the library itself along with its dependencies:
+Our `pom.xml` file defines the coordinates for the library itself along with its dependencies:
 
 **pom.xml**
 ```xml
@@ -153,7 +153,7 @@ This can be installed into our local repository with
 
     mvn install
 
-As we would expect from the library co-ordinates and the default local repository location, this is installed into `~/.m2/repository/com/enterprisey/libhello/1.0.0/`.
+As we would expect from the library coordinates and the default local repository location, this is installed into `~/.m2/repository/com/enterprisey/libhello/1.0.0/`.
 Both the JAR and POM files are published so the dependency information is still accessible.
 
 ## Maven application development
