@@ -45,10 +45,10 @@ on the classpath since that is where our application namespaces are defined. Def
 {% include code/deps/basic/src/greet/main.clj %}
 ```
 
-The `clojure` CLI allows us to invoke `clojure.main` with the project classpath with the `-m` option:
+The `clojure` CLI allows us to invoke `clojure.main` with the project classpath with the `-M` option:
 
 ```
-> clojure -m greet.main everyone
+> clojure -M -m greet.main everyone
 Hello everyone!
 ```
 
@@ -150,7 +150,7 @@ add it as a Git dependency rather than depend on the published JAR. This results
 This can then be run as before:
 
 ```
-> clojure -m greet.main --excite everyone
+> clojure -M -m greet.main --excite everyone
 Hello everyone!
 ```
 
