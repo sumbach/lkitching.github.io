@@ -8,7 +8,7 @@ so they can be located at program execution time. Tools like Maven are used to m
 classpath to make them all available.
 
 The existing Java ecosystem is built around publishing JARs to binary repositories, and, like Java, Clojure code can be packaged into JAR files, 
-whether it has been compiled ahead-of-time or is being distributed as source. Many Clojure libraries are published to the [clojars](https://clojars.org/)
+whether it has been compiled ahead-of-time or is being distributed as source. Many Clojure libraries are published to the [Clojars](https://clojars.org/)
 repository instead of Maven central. However, since directories can be placed on the classpath, and Clojure code can be located
 and evaluated directly from source, the extra packaging and publish steps are not necessary for developing Clojure libraries and programs.
 
