@@ -1,5 +1,5 @@
 (ns greet.core)
 
 (defn greet [who]
-  (printf "Hello %s!%n" who)
+  (printf "Heyo %s!%n" who)
   (flush))
