@@ -30,7 +30,7 @@ __src/libhello/MessageSink.java__
 {% include code/jar/src/libhello/MessageSink.java %}
 ```
 
-In addition, we define a source of messages read from the command-line, and a sink which writes messages a `PrintStream`:
+In addition, we define a source of messages read from the command-line, and a sink which writes messages to a `PrintStream`:
 
 __src/libhello/CommandLineMessageSource.java__
 ```java
@@ -103,7 +103,7 @@ which we can then execute by placing both the lib and app JARs on the classpath:
 ## Manifest files
 
 When listing the contents of the JAR file above, we saw a `META-INF/MANIFEST.MF` file included. The `META-INF` directory within a JAR contains 
-files used to configure aspects of the JVM. The `MANIFEST.MF` file contain various sections of key-value pairs used to describe the contents of the JAR.
+files used to configure aspects of the JVM. The `MANIFEST.MF` file contains various sections of key-value pairs used to describe the contents of the JAR.
 The format of the `META-INF` directory and `MANIFEST.MF` files are described in detail within the [JAR file specification](https://docs.oracle.com/en/java/javase/20/docs/specs/jar/jar.html).
 
 The `jar` tool can be used to extract the contents of the default manifest file:
@@ -168,7 +168,7 @@ and run it with the `-jar` option as before:
 ### File collisions
 
 When building the uberjar above, we simply overwrote (using the `-o` option for `unzip`) any existing files within `libhello.jar`
-when extracting the `echo.jar` file. This file for our simple application since there are no collisions, except for the default manifest
+when extracting the `echo.jar` file. This is fine for our simple application since there are no collisions, except for the default manifest
 files in the two files, which should be the same. However, this simple strategy may not work for more complicated applications. It's possible
 that different JAR files will contain different files at the same path which need special handling to produce the corresponding file in the
 output JAR. One example is libraries which configure [ServiceLoader](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)

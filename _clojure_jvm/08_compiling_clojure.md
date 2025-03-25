@@ -38,7 +38,7 @@ The generated class methods simply delegate to Clojure functions with the approp
 of `greeter-`, so its `greet` method delegates to the function `greeter-greet` within the implementation namespace (by default the current namespace). Similarly, the `main`
 method of the `greet.main` class should be defined by a `-main` function.
 
-The `main` class can now be invoked as with another other main Java class:
+The `main` class can now be invoked as with any other main Java class:
 
 ```
 > java -cp classes:clojure-1.11.1.jar:core.specs.alpha-0.2.62.jar:spec.alpha-0.3.218.jar greet.main everyone
@@ -76,7 +76,7 @@ Hello everyone!
 
 ## Clojure uberjars
 
-Now we can create Java entrypoints for our Clojure applications, we can create 'fat' JARs by including the Clojure JARs along with
+Now that we can create Java entrypoints for our Clojure applications, we can create 'fat' JARs by including the Clojure JARs along with
 the application source files and any compiled classes. As before, we need to define a manifest file which specifies the main class
 
 **manifest.mf**

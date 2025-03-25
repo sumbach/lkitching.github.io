@@ -88,7 +88,7 @@ Within class files, descriptors are used to define the types of fields and metho
 #### Field descriptors
 
 JVM types are either one of the primitive types, an object type or an array type. The grammar for
-fields descriptors denote one of these three possibilities.
+field descriptors denotes one of these three possibilities.
 
 The primitive types are `byte`, `char`, `double`, `float`, `int`, `long`, `short` and `boolean` and these are denoted as `B`, `C`, `D`, `F`, `I`, `J`, `S` and `Z` respectively within
 the field descriptor grammar. For example, a descriptor of `J` indicates a field of the primitive `long` type.
@@ -176,7 +176,7 @@ public test.Hello();
         line 3: 0
 ```
 
-The constructor declares no format parameters, and returns `void` as shown by the descriptor. It does require a single parameter however - the
+The constructor declares no formal parameters, and returns `void` as shown by the descriptor. It does require a single parameter however - the
 reference to the new object being initialised. This is loaded onto the operand stack with the [aload_0](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.aload_n)
 instruction. The `java.lang.Object` constructor is then invoked in the same way, passing the reference just loaded as the first argument. The [invokespecial](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.invokespecial)
 is similar to `invokevirtual` and `invokestatic` but is required to invoke constructors and superclass methods. The operand to the `invokespecial` instruction is an index into the constant pool

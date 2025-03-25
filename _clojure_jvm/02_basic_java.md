@@ -26,7 +26,7 @@ This outputs a `Hello.class` file in the `./test` directory. The `main` method c
 
 Java program execution begins from a named class specified to the java runtime. In this previous example this was the class `test.Hello`.
 The JVM loads this class and executes its `main` method, which must have the signature `public static void main(String[])` i.e. a static 
-method called `main` which takes a single string array parameter. This array receives all the argument provided to the `java` command which
+method called `main` which takes a single string array parameter. This array receives all the arguments provided to the `java` command which
 do not configure the execution of the JVM itself.
 
 ## Loading classes
