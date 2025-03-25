@@ -119,7 +119,7 @@ Here are the references made by the `test.Hello` class:
 | #8   | `java/lang/System` | Class | Class which defines the static `out` field |
 | #7   | `java/lang/System::out` | Field | Reference to the `out` field of the `java.lang.System` class |
 | #12 | `Ljava/io/PrintStream;` | Type reference | The declared type of the `System.out` field |
-| #13 | | String | The string constant "Hello world!" |
+| #13 | | String | The String constant "Hello world!" |
 | #16 | `java/io/PrintStream` | Class | Type defining the `println` method |
 | #15 | `java/io/PrintStream::println` | Method | The `println` method used to write to the console |
 | #21 | `test/Hello` | Class | The class defined by this class file. The `this_class` property contains this index into the constant pool |
@@ -205,8 +205,8 @@ The flags also indicate the method is `static` and `public`.
 The [getstatic](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.getstatic) instruction loads a field reference onto the operand stack. The operand of `#7` is the index of the reference to the
 `System.out` field within the constant pool of the `test.Hello` class.
 
-The string "Hello world!" is pushed onto the operand stack with the [ldc](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.ldc) instruction. The operand of
-`#13` is the index of the string within the class constant pool.
+The String "Hello world!" is pushed onto the operand stack with the [ldc](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.ldc) instruction. The operand of
+`#13` is the index of the String within the class constant pool.
 
-At this point the operand stack contains the arguments to the `java.io.PrintStream.<println>` method - the receiver (the contents of the `System.out` field), and the string to write. The
+At this point the operand stack contains the arguments to the `java.io.PrintStream.<println>` method - the receiver (the contents of the `System.out` field), and the String to write. The
 method is invoked with [invokevirtual](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.invokevirtual) using the method reference in the class constant pool.
