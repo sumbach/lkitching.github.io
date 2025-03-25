@@ -37,8 +37,8 @@ They contain a sequence of sections
 
 1. [Magic number](#magic-number)
 2. [Version number](#version-number)
-3. [Constant pool](#constant-pool)
-4. [Class properties](#class-properties)
+3. [Class properties](#class-properties)
+4. [Constant pool](#constant-pool)
 5. Interfaces
 6. Fields
 7. [Methods](#methods)
