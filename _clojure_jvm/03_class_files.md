@@ -78,7 +78,7 @@ code. These names and their types are recorded in the constant pool.
 
 ### Binary names
 
-The format of binary names within `.class` files differs slightly from those in `.java` files. The `.` separator used by Java is replaced within `.class` files.
+The format of binary names within `.class` files differs slightly from those in `.java` files. The `.`&nbsp;separator used by Java is replaced within `.class` files.
 For example the class `java.lang.Object` will be refered to as `java/lang/Object` within class files.
 
 ### Descriptors
