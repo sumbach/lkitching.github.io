@@ -107,7 +107,7 @@ determined by the artifact packaging type - this is usually `jar` for Java artif
 
     org/clojure/data.json/0.2.6/data.json-0.2.6.jar
 
-#### Maven central
+#### Maven Central
 
 Maven defines a single repository `central` in the [super POM](https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html). This is located at http://repo.maven.apache.org/maven2 and it means that Maven
 projects can reference dependencies published to this repository without any further configuration.
@@ -213,7 +213,7 @@ Another option is to build uber JARs using the [Maven shade plugin](https://mave
 
 Now the library and application are working locally, it's time to share the library with our colleagues. Our chief architect is convinced
 it constitutes a key competitive advantage for the company and is unwilling to unleash it on an unsuspecting public. She arranges for a private
-Maven repository to be set up, and our CI process to publish there instead of the Maven central repository. We advise any teams wishing to use
+Maven repository to be set up, and our CI process to publish there instead of the Maven Central repository. We advise any teams wishing to use
 it to configure the private repository in their application POM files with the following fragment:
 
 ```xml
