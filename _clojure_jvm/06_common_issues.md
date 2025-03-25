@@ -143,7 +143,7 @@ com.picosoft.messaging.db.PostgresMessageSourceFactory
 com.picosoft.messaging.db.MySqlMessageSourceFactory
 ```
 
-when the implementation JAR is on the classpath these classes can be located and loaded via the `ServiceLoader` interface.
+when the implementation JAR is on the classpath, these classes can be located and loaded via the `ServiceLoader` interface.
 
 Special care must be taken when building an uberjar containing service loader classes. Multiple implementation JARs will define
 the same `META-INF/services/{service.class}` file. When building uberjars, the default conflict handling behaviour for

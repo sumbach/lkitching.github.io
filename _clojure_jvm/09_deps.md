@@ -7,7 +7,7 @@ So far we've seen how Java files are compiled to class files and collected into 
 so they can be located at program execution time. Tools like Maven are used to manage dependencies and build the required
 classpath to make them all available.
 
-The existing Java ecosystem is built around publishing JARs to binary repositories, and like Java, Clojure code can be packaged into JAR files, 
+The existing Java ecosystem is built around publishing JARs to binary repositories, and, like Java, Clojure code can be packaged into JAR files, 
 whether it has been compiled ahead-of-time or is being distributed as source. Many Clojure libraries are published to the [clojars](https://clojars.org/)
 repository instead of Maven central. However, since directories can be placed on the classpath, and Clojure code can be located
 and evaluated directly from source, the extra packaging and publish steps are not necessary for developing Clojure libraries and programs.
@@ -72,7 +72,7 @@ refered to as the `system` and `user` files. You can find the locations of all t
  :config-files ["/install/dir/deps.edn", "~/.clojure/deps.edn", "deps.edn"]
 ```
 
-If you open the first of these (the system project file) you will see it has default settings for the `:paths` and `:deps` properties
+If you open the first of these (the system project file), you will see it has default settings for the `:paths` and `:deps` properties
 
 **/install/dir/deps.edn**
 ```clojure
