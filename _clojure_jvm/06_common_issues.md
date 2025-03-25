@@ -44,7 +44,7 @@ then get the properties of the running process
 
     jinfo -sysprops <PID>
 
-again the `java.class.path` property contains the classpath of the process.
+Again the `java.class.path` property contains the classpath of the process.
 
 ## UnsupportedClassVersionError
 
@@ -61,21 +61,21 @@ This error usually occurs when an application is compiled against one version of
 {% include code/common_issues/version1/Greeter.java %}
 ```
 
-after some time, a new version of this class is created with a new method:
+After some time, a new version of this class is created with a new method:
 
 **version2/Greeter.java**
 ```java
 {% include code/common_issues/version2/Greeter.java %}
 ```
 
-an application is created which uses the newer version:
+An application is created which uses the newer version:
 
 **GreetApp.java**
 ```java
 {% include code/common_issues/GreetApp.java %}
 ```
 
-compiling both class versions and the application against the newer version
+Compiling both class versions and the application against the newer version
 
 ```
 pushd version1 && javac Greeter.java && popd
@@ -83,11 +83,11 @@ pushd version2 && javac Greeter.java && popd
 javac -cp .:version2 GreetApp.java
 ```
 
-running the application with the new version on the classpath works as expected:
+Running the application with the new version on the classpath works as expected:
 
     java -cp .:version2 GreetApp
 
-running with the old version on the classpath results in an error:
+Running with the old version on the classpath results in an error:
 
 ```
 > java -cp .:version1 GreetApp
@@ -135,7 +135,7 @@ public class PostgresMessageSourceFactory implements MessageSourceFactory { ... 
 public class MySqlMessageSourceFactory implements MessageSourceFactory { ... }
 ```
 
-these would then be listed as implementation classes within the corresponding interface service file:
+These would then be listed as implementation classes within the corresponding interface service file:
 
 **META-INF/services/com.picosoft.messaging.MessageSourceFactory**
 ```
@@ -143,7 +143,7 @@ com.picosoft.messaging.db.PostgresMessageSourceFactory
 com.picosoft.messaging.db.MySqlMessageSourceFactory
 ```
 
-when the implementation JAR is on the classpath, these classes can be located and loaded via the `ServiceLoader` interface.
+When the implementation JAR is on the classpath, these classes can be located and loaded via the `ServiceLoader` interface.
 
 Special care must be taken when building an uberjar containing service loader classes. Multiple implementation JARs will define
 the same `META-INF/services/{service.class}` file. When building uberjars, the default conflict handling behaviour for

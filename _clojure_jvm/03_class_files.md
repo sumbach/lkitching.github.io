@@ -199,7 +199,7 @@ public static void main(java.lang.String[]);
         line 6: 8
 ```
 
-As indicated by the descriptor, The `main` method defines a single `String[]` parameter and has a return type of `void`. 
+As indicated by the descriptor, the `main` method defines a single `String[]` parameter and has a return type of `void`. 
 The flags also indicate the method is `static` and `public`.
 
 The [getstatic](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.getstatic) instruction loads a field reference onto the operand stack. The operand of `#7` is the index of the reference to the

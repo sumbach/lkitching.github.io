@@ -52,14 +52,14 @@ The `clojure` CLI allows us to invoke `clojure.main` with the project classpath 
 Hello everyone!
 ```
 
-you can display the computed classpath with
+You can display the computed classpath with
 
 ```
 > clojure -Spath
 src:~/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar:...
 ```
 
-as expected, it contains our `src` directory and the JAR files for the Clojure JAR and all its dependencies.
+As expected, it contains our `src` directory and the JAR files for the Clojure JAR and all its dependencies.
 
 ### System and user deps
 
@@ -104,7 +104,7 @@ You can define a `dev` alias within the project `deps.edn` file
 {% include code/deps/aliases/deps.edn %}
 ```
 
-then supply it when starting the REPL:
+Then supply it when starting the REPL:
 
 ```
 > clojure -A:dev
