@@ -89,8 +89,8 @@ The fat JAR can then be built with
 ```
 > mkdir classes uber
 > unzip -d uber clojure-1.11.1.jar
-> unzip -d -o -d uber/ core.specs.alpha-0.2.62.jar
-> unzip -d -o -d uber/ spec.alpha-0.3.218.jar
+> unzip -o -d uber/ core.specs.alpha-0.2.62.jar
+> unzip -o -d uber/ spec.alpha-0.3.218.jar
 > java -cp clojure-1.11.1.jar:core.specs.alpha-0.2.62.jar:spec.alpha-0.3.218.jar:classes:src clojure.main -e "(compile 'greet.main)"
 > cp -r classes/* uber/
 > cp -r src/* uber/

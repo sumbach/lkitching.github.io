@@ -32,7 +32,7 @@ __src/libhello/MessageSink.java__
 
 In addition, we define a source of messages read from the command-line, and a sink which writes messages a `PrintStream`:
 
-__src/libhello/CommandLinkMessageSource.java__
+__src/libhello/CommandLineMessageSource.java__
 ```java
 {% include code/jar/src/libhello/CommandLineMessageSource.java %}
 ```
@@ -56,7 +56,7 @@ jar --create --file libhello.jar -C classes/libhello .
 
 this creates a `libhello.jar` file in the current directory. We can list the contents of this file with the `--list` command:
 
-    jar --lib --file libhello.jar
+    jar --list --file libhello.jar
 
 This shows the archive contains the `.class` files as their expected locations on the classpath, along with a `META-INF/MANIFEST.MF` file.
 This file is called the `_manifest` file and is described [below](#manifest-files).
@@ -163,7 +163,7 @@ We can now build the new JAR:
 
 and run it with the `-jar` option as before:
 
-    > java --jar echo-uber.jar Hello world '!'
+    > java -jar echo-uber.jar Hello world '!'
 
 ### File collisions
 

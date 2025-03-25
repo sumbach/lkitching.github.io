@@ -56,7 +56,7 @@ you can display the computed classpath with
 
 ```
 > clojure -Spath
-src:~/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar:~/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar:...
+src:~/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar:...
 ```
 
 as expected, it contains our `src` directory and the JAR files for the Clojure JAR and all its dependencies.
@@ -76,7 +76,7 @@ If you open the first of these (the system project file) you will see it has def
 
 **/install/dir/deps.edn**
 ```clojure
-{:path ["src"]
+{:paths ["src"]
  :deps {
    org.clojure/clojure {:mvn/version "1.11.1"}
  }
@@ -158,7 +158,7 @@ If you look at the classpath for this project:
 
 ```
 > clojure -Spath
-src:~/.gitlibs/libs/clojure/tools.cli/23ee9655fab71cef253a51d1bce3e7b2327499a3/src/main/clojure:~/projects/greet/lib/src
+src:~/.gitlibs/libs/clojure/tools.cli/23ee9655fab71cef253a51d1bce3e7b2327499a3/src/main/clojure:...:~/projects/greet/lib/src:...
 ```
 
 You can see the `tools.cli` repository was cloned locally under `~/.gitlibs` and the local project source directory was placed on the classpath.
