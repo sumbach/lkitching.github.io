@@ -1,0 +1,2 @@
+Main-Class: test.Echo
+Class-Path: libhello.jar

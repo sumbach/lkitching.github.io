@@ -1,0 +1,5 @@
+{:paths ["src"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        clojure/tools.cli {:git/url "https://github.com/clojure/tools.cli.git"
+                           :git/sha "23ee9655fab71cef253a51d1bce3e7b2327499a3"}
+        picosoft/lib-greet {:local/root "../lib"}}}
