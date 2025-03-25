@@ -103,11 +103,9 @@ which can be used to locate an artifact based on its co-ordinates. For most arti
     /$groupId[0]/../${groupId[n]/$artifactId/$version/$artifactId-$version.$extension
 
 where `$groupId[0]..groupId[n]` are the dot-separated components of the publisher's groupId. For example artifacts for the `org.clojure` group will be published under `org/clojure`. The `$extension` component is
-determined by the artifact packaging type - this is usually `jar` for Java artifacts. For example, the `data.json` project is published by the `org.clojure` group, so the JAR for version `0.2.6` would be located at:
+determined by the artifact packaging type - this is usually `jar` for Java artifacts. For example, the `data.json` project is published by the `org.clojure` group, so the JAR for version `0.2.6` would be located within a repository at:
 
     org/clojure/data.json/0.2.6/data.json-0.2.6.jar
-
-within a repository.
 
 #### Maven central
 
@@ -224,7 +222,7 @@ it to configure the private repository in their application POM files with the f
 
 ### Repository settings
 
-Public repositories can be accessed anonymously, but our private repository requires authentication to access. Since authentication is connected
+Public repositories can be accessed anonymously, but our private repository requires authentication. Since authentication is connected
 to a user instead of a project, Maven allows user settings to be configured outside of a project. By default these settings are defined within
 a `~/.m2/settings.xml` file. The full format of the file is specified in the [documentation](https://maven.apache.org/settings.html), but for our private
 repository, we just need to configure the credentials to use:
