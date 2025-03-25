@@ -40,7 +40,7 @@ __EchoJSON.java__
 
 __messages.json__
 ```json
-{% include code/java_dependencies/messages.json %}
+{% include code/java_dependencies/messages.json -%}
 ```
 
 and run it to check the input messages are displayed as expected:

@@ -18,7 +18,7 @@ When compiled with `javac`:
 it creates a `test/Hello.class` file in the current directory. Opening this file with `javap` shows a brief summary of the `test.Hello` class:
 
 ```
-{% include code/basic_java/hello_summary %}
+{% include code/basic_java/hello_summary -%}
 ```
 
 The `.class` file contains all the information required to load the class and execute its methods. The full contents of the file can be displayed
@@ -29,7 +29,7 @@ using the `-verbose` option:
 This shows much more detail:
 
 ```
-{% include code/basic_java/hello_full %}
+{% include code/basic_java/hello_full -%}
 ```
 
 The format of `.class` files is described in full in the [JVM specification](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-4.html).
@@ -54,7 +54,7 @@ Note `.class` files are stored in big-endian order which may differ from the arc
     od --endian=big -x test/Hello.class
 
 ```
-{% include code/basic_java/hello_dump %}
+{% include code/basic_java/hello_dump -%}
 ```
 
 ## Version number
@@ -63,7 +63,7 @@ The first information displayed by `javap` is the major and minor version of the
 which means it is only supported by versions 14 or higher of the JVM. Attempting to load this class on an older version of the JVM will result in an error e.g.
 
 ```
-{% include code/basic_java/version_error %}
+{% include code/basic_java/version_error -%}
 ```
 
 ## Class properties 

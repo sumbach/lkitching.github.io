@@ -91,7 +91,7 @@ Running with the old version on the classpath results in an error:
 
 ```
 > java -cp .:version1 GreetApp
-{% include code/common_issues/nosuchmethoderror.txt %}
+{% include code/common_issues/nosuchmethoderror.txt -%}
 ```
 
 Some libraries deprecate and subsequently remove methods from classes, so it is possible that
