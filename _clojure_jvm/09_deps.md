@@ -70,6 +70,7 @@ refered to as the `system` and `user` files. You can find the locations of all t
 > clojure -Sdescribe
 {:version "1.11.1.1267"
  :config-files ["/install/dir/deps.edn", "~/.clojure/deps.edn", "deps.edn"]
+ ,,,}
 ```
 
 If you open the first of these (the system project file), you will see it has default settings for the `:paths` and `:deps` properties
@@ -80,7 +81,8 @@ If you open the first of these (the system project file), you will see it has de
  :deps {
    org.clojure/clojure {:mvn/version "1.11.1"}
  }
- ...
+ ,,,
+}
 ```
 
 This means we could use these defaults in our project and our project `deps.edn` file could simply contain
