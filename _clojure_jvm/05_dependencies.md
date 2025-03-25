@@ -193,7 +193,7 @@ classpath from Maven and supply that to run the application:
 
 ```
 mvn dependency:build-classpath -Dmdep.outputFile=classpath.txt
-java -cp $(cat classpath.txt):target/json-test-1.0.0.jar test.EchoJSON messages.json
+java -cp "$(cat classpath.txt):target/json-test-1.0.0.jar" test.EchoJSON messages.json
 ```
 
 If we look in the `classpath.txt` file written by the `mvn` command we can see it references all transitive dependencies of the application
