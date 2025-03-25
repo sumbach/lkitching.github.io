@@ -93,7 +93,7 @@ field descriptors denotes one of these three possibilities.
 The primitive types are `byte`, `char`, `double`, `float`, `int`, `long`, `short` and `boolean`, denoted as `B`, `C`, `D`, `F`, `I`, `J`, `S` and `Z` respectively within
 the field descriptor grammar. For example, a descriptor of `J` indicates a field of the primitive `long` type.
 
-Object types are defined with the literal `L` followed by the binary name of the class type followed by the literal ';'. For example a field of type `java.lang.Thead` has a descriptor of `Ljava/lang/Thread;`.
+Object types are defined with the literal `L` followed by the binary name of the class type followed by the literal `;`. For example a field of type `java.lang.Thead` has a descriptor of `Ljava/lang/Thread;`.
 
 Array types are defined with the literal `[` followed by the element type. So an array of `java.lang.Thread` references has a descriptor of `[Ljava/lang/Thread;` and an array of primitive `int` values
 has a descriptor of `[I`.

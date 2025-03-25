@@ -109,7 +109,7 @@ determined by the artifact packaging type - this is usually `jar` for Java artif
 
 #### Maven Central
 
-Maven defines a single repository `central` in the [super POM](https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html). This is located at http://repo.maven.apache.org/maven2 and it means that Maven
+Maven defines a single repository `central` in the [super POM](https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html). This is located at `http://repo.maven.apache.org/maven2` and it means that Maven
 projects can reference dependencies published to this repository without any further configuration.
 
 #### Local repositories
