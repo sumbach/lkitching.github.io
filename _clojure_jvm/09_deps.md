@@ -25,8 +25,10 @@ the `clojure` command should start a Clojure REPL:
 
 ```
 > clojure
+Clojure 1.11.1
 user=> (+ 1 2)
 3
+user=>
 ```
 
 Now we can create a basic deps project. The structure of the project is defined in a `deps.edn` file in the project root directory.
@@ -110,6 +112,7 @@ Then supply it when starting the REPL:
 
 ```
 > clojure -A:dev
+Clojure 1.11.1
 user=> (require '[sc.api :as sc])
 nil
 user=>
