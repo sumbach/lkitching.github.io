@@ -72,12 +72,12 @@ change back to the parent directory where the `Hello.java` file is defined
 ### System classes
 
 The `test.Hello` class makes reference to another class `java.lang.System` which is defined by the core Java library. Since there's no `java/lang/System.class` file
-under the current directory, you might wonder how it is loaded. The answer is that the bootstrap classloader has its own internal mechanism for locating core library classes.
-The only requirement for classloaders is that they can resolve and load classes given their full (binary) names. There is no requirement that these exist as `.class` files on
-disk. They can be loaded from the network, a database or defined dynamically depending on how the classloader is implemented. The bootstrap classloader knows where to locate
+under the current directory, you might wonder how it is loaded. The answer is that the bootstrap class loader has its own internal mechanism for locating core library classes.
+The only requirement for class loaders is that they can resolve and load classes given their full (binary) names. There is no requirement that these exist as `.class` files on
+disk. They can be loaded from the network, a database or defined dynamically depending on how the class loader is implemented. The bootstrap class loader knows where to locate
 core Java classes and loads them as required.
 
-Older JVMs (before version 9) did ship core Java classes in a Java archive. This was usually located at `jre/lib/rt.jar` within the JVM distribution. The bootstrap classloader
+Older JVMs (before version 9) did ship core Java classes in a Java archive. This was usually located at `jre/lib/rt.jar` within the JVM distribution. The bootstrap class loader
 was additionally configured with a 'bootstrap classpath' containing this core archive. Since the advent of Java modules in Java 9, core classes are distributed in a more efficient
 format.
 
