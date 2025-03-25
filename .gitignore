@@ -8,3 +8,4 @@ vendor
 *.jar
 target/
 .cpcache/
+classpath.txt
