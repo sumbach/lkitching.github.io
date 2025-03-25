@@ -106,7 +106,7 @@ Methods which return a value use the grammar for field descriptors to denote the
 Method descriptors consist of a literal `(`, the corresponding field descriptor for each parameter type in sequence, a literal `)` followed by the return type descriptor. This can be either `V` for `void` methods,
 or a field descriptor for the return type.
 
-For example the method `public String test(int i, boolean b, Object o)` has a method descriptor of `(IZLjava/lang/Object;)java/lang/String;`.
+For example the method `public String test(int i, boolean b, Object o)` has a method descriptor of `(IZLjava/lang/Object;)Ljava/lang/String;`.
 
 ## Constant pool contents
 
@@ -118,7 +118,7 @@ Here are the references made by the `test.Hello` class:
 | #1   | `java/lang/Object::<init>` | Method | Object constructors are given the special name `<init>` within `.class` files. This is invoked by the `test.Hello` constructor (see below). |
 | #8   | `java/lang/System` | Class | Class which defines the static `out` field |
 | #7   | `java/lang/System::out` | Field | Reference to the `out` field of the `java.lang.System` class |
-| #12 | `Ljava/io/PrintStream` | Type reference | The declared type of the `System.out` field |
+| #12 | `Ljava/io/PrintStream;` | Type reference | The declared type of the `System.out` field |
 | #13 | | String | The string constant "Hello world!" |
 | #16 | `java/io/PrintStream` | Class | Type defining the `println` method |
 | #15 | `java/io/PrintStream::println` | Method | The `println` method used to write to the console |
@@ -206,7 +206,7 @@ The [getstatic](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#
 `System.out` field within the constant pool of the `test.Hello` class.
 
 The literal string "Hello world!" is pushed onto the operand stack with the [ldc](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.ldc) instruction. The operand of
-`#15` is the index of the string within the class constant pool.
+`#13` is the index of the string within the class constant pool.
 
-At this point the operand stack contains the arguments to the `java.io.PrintString.<println>` method - the receiver (the contents of the `System.out` field), and the string to write. The
+At this point the operand stack contains the arguments to the `java.io.PrintStream.<println>` method - the receiver (the contents of the `System.out` field), and the string to write. The
 method is invoked with [invokevirtual](https://docs.oracle.com/javase/specs/jvms/se20/html/jvms-6.html#jvms-6.5.invokevirtual) using the method reference in the class constant pool.

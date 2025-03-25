@@ -21,7 +21,7 @@ We fetch the JSON library JAR locally and begin work:
 
 after a frenetic caffeine-fueled 10-hour coding session, we finally have our new message source implementation:
 
-__JSONMessageSource.java__
+__src/libhello/JSONMessageSource.java__
 ```
 {% include code/java_dependencies/JSONMessageSource.java %}
 ```
@@ -171,6 +171,7 @@ json-test/
         test/
           EchoJSON.java
   pom.xml
+  messages.json
 ```
 
 **pom.xml**

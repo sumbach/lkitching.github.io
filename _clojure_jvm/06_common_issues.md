@@ -78,8 +78,8 @@ an application is created which uses the newer version:
 compiling both class versions and the application against the newer version
 
 ```
-pushd version1 && javac Greet.java && popd
-pushd version2 && javac Greet.java && popd
+pushd version1 && javac Greeter.java && popd
+pushd version2 && javac Greeter.java && popd
 javac -cp .:version2 GreetApp.java
 ```
 
@@ -137,7 +137,7 @@ public class MySqlMessageSourceFactory implements MessageSourceFactory { ... }
 
 these would then be listed as implementation classes within the corresponding interface service file:
 
-**META-INF/services/com.picosoft.messaging**
+**META-INF/services/com.picosoft.messaging.MessageSourceFactory**
 ```
 com.picosoft.messaging.db.PostgresMessageSourceFactory
 com.picosoft.messaging.db.MySqlMessageSourceFactory

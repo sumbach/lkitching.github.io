@@ -37,7 +37,7 @@ classpath the namespace could be defined in. The conversion process is as follow
 
 1. Convert any `.` characters in the namespace name to `/`s
 2. Convert any `-` characters in the namespace name to `_`s
-3. Add `.clj`, `.cljc` and `.__init.class` to the resulting name
+3. Add `.clj`, `.cljc` and `__init.class` to the resulting name
 
 This means there are three candidate locations a namespace could be loaded from. Applying the process to the namespace
 `org.picosoft.lib-hello.core` the candidate locations are:

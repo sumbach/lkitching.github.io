@@ -32,7 +32,7 @@ __src/libhello/MessageSink.java__
 
 In addition, we define a source of messages read from the command-line, and a sink which writes messages a `PrintStream`:
 
-__src/libhello/CommandLinkMessageSource.java__
+__src/libhello/CommandLineMessageSource.java__
 ```java
 {% include code/jar/src/libhello/CommandLineMessageSource.java %}
 ```
@@ -163,7 +163,7 @@ We can now build the new JAR:
 
 and run it with the `-jar` option as before:
 
-    > java --jar echo-uber.jar Hello world '!'
+    > java -jar echo-uber.jar Hello world '!'
 
 ### File collisions
 
