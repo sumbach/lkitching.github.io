@@ -57,16 +57,16 @@ Exception in thread "main" java.lang.NoClassDefFoundError: org/json/JSONTokener
 	at enterprisey.JSONMessageSource.fromFile(JSONMessageSource.java:21)
 ```
 
-This occurs because when running their application, the other team has not placed `json-java.jar` on the classpath, and this defines
+This occurs because, when running their application, the other team has not placed `json-java.jar` on the classpath, and this defines
 the `org.json.JSONTokener` class. This is not surprising, since given the `libhello.jar` file, there is no way to detect that it depends
 on `json-java.jar` at runtime. JAR files are just an archive of class files and do not define a mechanism for declaring which other JARs
 define dependency classes.
 
 In addition, the other team has a few other requirements for consuming our library:
 
-* They would prefer not to commit binary files to their source control repository
-* They would like to be able to identify the library version from the JAR file name
-* They need to be able to identify all dependency JARs so they can fetch them and construct the correct classpath to run their application
+* They would prefer not to commit binary files to their source control repository.
+* They would like to be able to identify the library version from the JAR file name.
+* They need to be able to identify all dependency JARs so they can fetch them and construct the correct classpath to run their application.
 
 ## Maven
 
@@ -120,7 +120,7 @@ Therefore, version `0.2.6` of the `data.json` JAR would be fetched to `~/.m2/rep
 ## Maven library development
 
 Now that we understand the basics of Maven we can create a project for our library. First we create a directory for the project and set it up in the
-standard Maven layout. As defined in the [super POM](https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html) Java source files go under
+standard Maven layout. As defined in the [super POM](https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html), Java source files go under
 `${project.basedir}/src/main/java`.
 
 ```
