@@ -35,7 +35,7 @@ Now we can create a basic deps project. The structure of the project is defined 
 
 **deps.edn**
 ```clojure
-{% include code/deps/basic/deps.edn %}
+{% include code/deps/basic/deps.edn -%}
 ```
 
 This declares a dependency on the main `clojure` JAR. This JAR is published to Maven Central so should be resolved as a Maven dependency.
@@ -44,7 +44,7 @@ on the classpath since that is where our application namespaces are defined. Def
 
 **src/greet/main.clj**
 ```clojure
-{% include code/deps/basic/src/greet/main.clj %}
+{% include code/deps/basic/src/greet/main.clj -%}
 ```
 
 The `clojure` CLI allows us to invoke `clojure.main` with the project classpath with the `-M` option:
@@ -105,7 +105,7 @@ You can define a `dev` alias within the project `deps.edn` file
 
 **deps.edn**
 ```clojure
-{% include code/deps/aliases/deps.edn %}
+{% include code/deps/aliases/deps.edn -%}
 ```
 
 Then supply it when starting the REPL:
@@ -131,12 +131,12 @@ We define the library first:
 
 **lib/deps.edn**
 ```clojure
-{% include code/deps/sources/lib/deps.edn %}
+{% include code/deps/sources/lib/deps.edn -%}
 ```
 
 **lib/src/greet/core.clj**
 ```clojure
-{% include code/deps/sources/lib/src/greet/core.clj %}
+{% include code/deps/sources/lib/src/greet/core.clj -%}
 ```
 
 We decide to use [tools.cli](https://github.com/clojure/tools.cli) for the command-line parsing. We need to use a specific commit for legal reasons, so
@@ -144,12 +144,12 @@ add it as a Git dependency rather than depend on the published JAR. This results
 
 **main/deps.edn**
 ```clojure
-{% include code/deps/sources/main/deps.edn %}
+{% include code/deps/sources/main/deps.edn -%}
 ```
 
 **main/src/greet/main.clj**
 ```clojure
-{% include code/deps/sources/main/src/greet/main.clj %}
+{% include code/deps/sources/main/src/greet/main.clj -%}
 ```
 
 This can then be run as before:
