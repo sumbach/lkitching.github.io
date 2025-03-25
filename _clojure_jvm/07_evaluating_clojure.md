@@ -31,7 +31,7 @@ Hello world!
 
 ### Locating Clojure files
 
-Most Clojure code is written to file and located and evaluated by the Clojure runtime during program execution. Similar to Java class files,
+Most Clojure code is written to files and located and evaluated by the Clojure runtime during program execution. Similar to Java class files,
 Clojure source files are located on the classpath. When a namespace is loaded, the namespace name is converted to a set of relative locations on the
 classpath the namespace could be defined in. The conversion process is as follows:
 
