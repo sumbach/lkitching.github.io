@@ -59,7 +59,7 @@ this creates a `libhello.jar` file in the current directory. We can list the con
     jar --list --file libhello.jar
 
 This shows the archive contains the `.class` files as their expected locations on the classpath, along with a `META-INF/MANIFEST.MF` file.
-This file is called the `_manifest` file and is described [below](#manifest-files).
+This file is called the _manifest_ file and is described [below](#manifest-files).
 
 ```
 {% include code/jar/jar_list %}

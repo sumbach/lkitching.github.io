@@ -49,7 +49,7 @@ Hello everyone!
 
 The `ns` macro used to define namespaces supports an optional `:gen-class` option to compile a class for the namespace.
 It supports all the options of [gen-class](https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/gen-class)
-and by default uses the namespace name as the class name, sets `:main` to `true`, and sets the prefix to '-'. This means
+and by default uses the namespace name as the class name, sets `:main` to `true`, and sets the prefix to `-`. This means
 a `-main` function is expected to exist which corresponds to the `main` method of the generated class.
 
 This allows us to write straightforward Clojure code which is compiled into a Java entrypoint without having to invoke it via
