@@ -67,7 +67,7 @@ on the classpath. This can be done with the `-classpath` option to the `java` co
 
 change back to the parent directory where the `Hello.java` file is defined
 
-    $ cd
+    $ cd ..
 
 ### System classes
 

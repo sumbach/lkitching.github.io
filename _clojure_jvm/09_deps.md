@@ -45,10 +45,10 @@ on the classpath since that is where our application namespaces are defined. Def
 {% include code/deps/basic/src/greet/main.clj %}
 ```
 
-The `clojure` CLI allows us to invoke `clojure.main` with the project classpath with the `-m` option:
+The `clojure` CLI allows us to invoke `clojure.main` with the project classpath with the `-M` option:
 
 ```
-> clojure -m greet.main everyone
+> clojure -M -m greet.main everyone
 Hello everyone!
 ```
 
@@ -56,7 +56,7 @@ you can display the computed classpath with
 
 ```
 > clojure -Spath
-src:~/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar:~/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar:...
+src:~/.m2/repository/org/clojure/clojure/1.11.1/clojure-1.11.1.jar:...
 ```
 
 as expected, it contains our `src` directory and the JAR files for the Clojure JAR and all its dependencies.
@@ -76,7 +76,7 @@ If you open the first of these (the system project file) you will see it has def
 
 **/install/dir/deps.edn**
 ```clojure
-{:path ["src"]
+{:paths ["src"]
  :deps {
    org.clojure/clojure {:mvn/version "1.11.1"}
  }
@@ -150,7 +150,7 @@ add it as a Git dependency rather than depend on the published JAR. This results
 This can then be run as before:
 
 ```
-> clojure -m greet.main --excite everyone
+> clojure -M -m greet.main --excite everyone
 Hello everyone!
 ```
 
@@ -158,7 +158,7 @@ If you look at the classpath for this project:
 
 ```
 > clojure -Spath
-src:~/.gitlibs/libs/clojure/tools.cli/23ee9655fab71cef253a51d1bce3e7b2327499a3/src/main/clojure:~/projects/greet/lib/src
+src:~/.gitlibs/libs/clojure/tools.cli/23ee9655fab71cef253a51d1bce3e7b2327499a3/src/main/clojure:...:~/projects/greet/lib/src:...
 ```
 
 You can see the `tools.cli` repository was cloned locally under `~/.gitlibs` and the local project source directory was placed on the classpath.

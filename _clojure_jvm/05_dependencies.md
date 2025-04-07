@@ -21,7 +21,7 @@ We fetch the JSON library JAR locally and begin work:
 
 after a frenetic caffeine-fueled 10-hour coding session, we finally have our new message source implementation:
 
-__JSONMessageSource.java__
+__src/libhello/JSONMessageSource.java__
 ```
 {% include code/java_dependencies/JSONMessageSource.java %}
 ```
@@ -171,6 +171,7 @@ json-test/
         test/
           EchoJSON.java
   pom.xml
+  messages.json
 ```
 
 **pom.xml**
@@ -192,7 +193,7 @@ classpath from Maven and supply that to run the application:
 
 ```
 mvn dependency:build-classpath -Dmdep.outputFile=classpath.txt
-java -cp $(cat classpath.txt):target/json-test-1.0.0.jar test.EchoJSON messages.json
+java -cp "$(cat classpath.txt):target/json-test-1.0.0.jar" test.EchoJSON messages.json
 ```
 
 If we look in the `classpath.txt` file written by the `mvn` command we can see it references all transitive dependencies of the application
